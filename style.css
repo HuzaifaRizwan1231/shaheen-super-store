@@ -1,0 +1,265 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+.TopBar {
+  height: 80px;
+  background-color: #fff !important;
+  color: black !important;
+  
+  
+}
+
+
+
+.Logo{
+  height: 70px;
+  width: 100%;
+  padding: 0px 16px;
+}
+
+.AdminBar{
+  background-color: #003d29;  
+  color: white;
+
+  height: 30px;
+}
+
+.AdminBar a{
+  color: white;
+}
+
+.Products{
+  padding: 0px 40px;
+}
+.SecondBar {
+  height: 50px;
+  font-size: 15px;
+}
+
+.SideBar {
+  background-color: #ededed;
+}
+
+.SideBar .nav-item{
+  font-size: 18px;
+}
+.SideHeading {
+  background-color: #131921;
+  color: white;
+}
+
+.productImage{
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  background-color: white;
+  object-fit: contain;
+}
+
+.ProductCard{
+  transition: transform .2s;
+}
+
+.ProductCard:hover{
+  transform: scale(1.02);
+}
+
+.card-title{
+  font-size: 20px;
+}
+
+.card-text{
+  font-size: 14px;
+}
+
+.price_product{
+  justify-content: space-between;
+  
+}
+
+.mainSection{
+  min-height: 100vh;
+  position: relative;
+}
+
+/* admin index.php */
+.button{
+  font-size: 18px;
+    padding: 7px;
+    border-radius: 6px;
+    color: white;
+    background-color: #081150;
+    margin-bottom: 10px;
+}
+
+.ManageDetails{
+  background-color: #ededed;
+  align-items: center;
+}
+
+.ManageDetails img{
+  width: 100px;
+ 
+}
+
+.HeadingBorder{
+  background-color: #003d29;
+  color: white;
+  font-size: 18px;
+  padding: 7px;
+  border-radius:10px;
+}
+.CategoryHeading{
+
+  background-color: #003d29;
+  color: white;
+  font-size: 18px;
+  padding: 7px;
+  
+}
+
+.CategoryElements{
+  background-color: #ededed;
+  font-size: 18px;
+  padding: 5vh 0vh;
+  
+}
+
+.icon-hover:hover {
+  border-color: #3b71ca !important;
+  background-color: white !important;
+  color: #3b71ca !important;
+}
+
+.icon-hover:focus i {
+  color: #3b71ca !important;
+}
+
+
+.p-images{
+  border: solid 1px;
+  border-color: #dee2e6;
+}
+
+.p-images:focus {
+  border-color: #3b71ca;
+}
+
+
+.login{
+  margin-top: 10vh;
+}
+
+.loginField{
+  width: 40%;
+}
+
+.loginButton{
+  width: 40%;
+  padding: 5px;
+  border-radius: 100px;
+  border: transparent;
+  background-color: #003d29;
+  color: white;  
+  text-decoration: none;
+  transition: transform .2s;
+}
+
+.loginButton:hover{
+  transform: scale(1.05);
+}
+
+.textField{
+  margin:auto;
+  width: 95%;
+}
+
+.SubmitButton{
+  width: 40%;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 100px;
+  border: transparent;
+  background-color: #003d29;
+  color: white;  
+  text-decoration: none;
+  transition: transform .2s;
+}
+
+.SubmitButton:hover{
+  transform: scale(1.05);
+}
+
+
+
+
+
+.ProductButtonCart{
+  width: 40%;
+  padding: 10px;
+  border-radius: 100px;
+  border: transparent;
+  background-color: #003d29;
+  color: white;  
+  text-decoration: none;
+ 
+}
+
+.ProductButtonCart:hover{
+ background-color: #002715  ;
+}
+
+.ProductButtonView{
+  width: 40%;
+  padding: 10px;
+  border-radius: 100px;
+  border:1px solid #003d29;
+  background-color: white;
+  color: #003d29;  
+  text-decoration: none;
+  
+}
+
+.ProductButtonView:hover{
+  background-color: #50876F;
+  color: white;
+  
+}
+
+.ViewAllProducts{
+  width: 40%;
+  padding: 10px;
+  background-color: white;
+  color: #003d29;  
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+
+.carousel-item{
+
+  width: 100%;
+  height: 50vh;
+}
+
+
+.fa-trash{
+  transition: transform .2s;
+}
+
+.fa-trash:hover{
+  transform: scale(1.10);
+}
+
+.footerLinks a{
+  text-decoration: none;
+}
+
+
+
+
