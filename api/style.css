@@ -2,7 +2,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-
+/* Login Page */
 
 
 .TopBar {
@@ -152,6 +152,7 @@
 
 .login{
   margin-top: 10vh;
+  margin-bottom: 13vh;
 }
 
 .loginField{

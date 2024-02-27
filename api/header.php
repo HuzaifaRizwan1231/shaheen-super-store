@@ -109,7 +109,7 @@
 
                     else {
                     echo"<li class='nav-item me-3'>
-                        <a class='nav-link' href='login.php'><i class='fa-sharp fa-solid fa-user me-1'></i>Login</a>
+                        <a class='nav-link' href='index.php?login_page'><i class='fa-sharp fa-solid fa-user me-1'></i>Login</a>
                     </li>";
                     }
                 ?>

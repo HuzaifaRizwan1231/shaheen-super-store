@@ -16,7 +16,7 @@ if (isset($_POST['logout_user'])){
     header("Location: index.php");
 }
 
-include 'includes/connect.php';
+include './includes/connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,6 +60,12 @@ include 'includes/connect.php';
             }
             else if(isset($_GET['order_history'])){
                 include 'order_history.php';
+            }
+            else if(isset($_GET['login_page'])){
+                include 'login.php';
+            }
+            else if(isset($_GET['register_page'])){
+                include 'register.php';
             }
             else{
                 include 'products_home.php';

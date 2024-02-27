@@ -121,7 +121,7 @@
 
             else {
             echo"<li class='nav-item me-3'>
-                <a class='nav-link' href='adminLogin.php'><i class='fa-sharp fa-solid fa-user me-1'></i>Login</a>
+                <a class='nav-link' href='#'><i class='fa-sharp fa-solid fa-user me-1'></i>Login</a>
             </li>";
             }
         ?>
@@ -138,6 +138,8 @@
                     <?php 
                     if($_SESSION["is_admin_login"] != true){
                         echo"<script>alert('Please Login to Continue')</script>";
+                        include 'adminLogin.php';
+                        
                     }
                     else{
                         if(isset($_GET['insert_product'])){
@@ -281,6 +283,7 @@
                                 echo"<script>alert('User and his order history has been deleted')</script>";
                             } 
                         }
+                        
                     }
                 ?>
 

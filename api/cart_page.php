@@ -33,7 +33,7 @@
                         // wordwrap($mail_message,70);
                         // mail("huzaifa.rizwan1231@gmail.com","Purchase Complete",$mail_message);
 
-
+                        echo "<script>window.location='index.php';</script>";
 
                         
 
