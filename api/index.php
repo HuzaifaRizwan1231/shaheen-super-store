@@ -16,7 +16,7 @@ if (isset($_POST['logout_user'])){
     header("Location: index.php");
 }
 
-include './includes/connect.php';
+include 'includes/connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
