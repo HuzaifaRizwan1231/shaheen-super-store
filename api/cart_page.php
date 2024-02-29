@@ -33,7 +33,7 @@
                         // wordwrap($mail_message,70);
                         // mail("huzaifa.rizwan1231@gmail.com","Purchase Complete",$mail_message);
 
-                        echo "<script>window.location='index.php';</script>";
+                        echo "<script>window.location='index.php?cart_page';</script>";
 
                         
 
@@ -71,7 +71,7 @@
                                 $prod_id = $reader['product_id'];
                                 $query2 = "DELETE FROM orders WHERE user_id = $user_id AND product_id = $prod_id  AND order_status = 'Pending'";
                                 $result2 = mysqli_query($con,$query2); 
-                                // header("Location: index.php?cart_page");
+                                echo "<script>window.location='index.php?cart_page';</script>";
                             }
                             else{
                                 echo "<div class='card rounded-3 mb-4'>

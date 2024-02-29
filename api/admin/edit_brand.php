@@ -18,7 +18,8 @@
         if ($result){
             echo"<script>alert('Brand Edited Successfully')</script>";
         }
-        // header("Location: index.php?view_category");
+        echo "<script>window.location='index.php?view_brand';</script>";
+
     }
     }
 ?>

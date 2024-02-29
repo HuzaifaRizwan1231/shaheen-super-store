@@ -83,7 +83,7 @@
                         session_start();
                         $_SESSION["is_login"] = false;
 
-                        header("Location: index.php");
+                        echo "<script>window.location='index.php';</script>";
                     }
 
                     if ($_SESSION["is_login"] == true){

@@ -12,7 +12,7 @@ if (isset($_POST['logout_admin'])){
     session_start();
     $_SESSION["is_admin_login"] = false;
 
-   // header("Location: index.php");
+    echo "<script>window.location='index.php';</script>";
 }
 include '../includes/connect.php';
 ?>

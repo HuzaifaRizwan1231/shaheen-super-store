@@ -18,7 +18,7 @@
         if ($result){
             echo"<script>alert('Category Edited Successfully')</script>";
         }
-        // header("Location: index.php?view_category");
+        echo "<script>window.location='index.php?view_category';</script>";
     }
     }
 ?>
