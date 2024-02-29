@@ -60,24 +60,21 @@
             <hr class="mx-3">
             <?php 
                             if ($_SESSION["is_admin_login"] == true){
-                                echo"<li class='nav-item mx-auto dropdown' >
-                                <a class='nav-link dropdown-toggle AdminName' style='padding-right:35px;' href='#' id='navbarDropdown' role='button'
-                                    data-bs-toggle='dropdown' aria-expanded='false'>
-                                    <i class='fa-sharp fa-solid fa-user me-1'></i>".$_SESSION["admin_Name"]."
-                                </a>
-                                <ul class='dropdown-menu' aria-labelledby='navbarDropdown'>
-                                
-                                <li>
-                                <form action='' method='post'>
-                                <input type='submit' class='dropdown-item' name=logout_admin value='Logout'>
-                                </form>
+                                echo"
+                                <li class='nav-item mx-auto dropdown'>
+                                    <a href='#AdminSubmenu' class='nav-link dropdown-toggle' style='padding-right:35px;' id='navbarDropdown' role='button'
+                                    data-toggle='collapse' aria-expanded='false'><i class='fa-sharp fa-solid fa-user me-1'></i>
+                                            ".$_SESSION['admin_Name']."</a>
+                                    <ul class='collapse list-unstyled' id='AdminSubmenu'>
+                                        <li>
+                                           
+                                                <form action='' method='post'>
+                                                <input type='submit' class='dropdown-item' name=logout_admin value='Logout'>
+                                            </form>
+                                           
+                                        </li>
+                                    </ul>
                                 </li>
-                                    
-
-
-                                </ul>
-                                </li>
-                                
                                 ";
                             }
 
