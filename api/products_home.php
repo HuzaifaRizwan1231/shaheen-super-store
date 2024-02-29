@@ -47,7 +47,16 @@
     </div>
 
     <div class="container-fluid Products mb-4">
-        <h3 class="mb-5"><b>Todays Best Deals For You!</b>
+        <h3 class="mb-5">
+        <b>
+            <?php if (isset($_GET['all_products'])){
+                echo"All Products";
+            }
+            else{
+                echo"Todays Best Deals For You!";
+            }
+            ?>
+        </b>
         </h3>
         <div class="row">
 

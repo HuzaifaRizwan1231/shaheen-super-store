@@ -17,7 +17,7 @@
                     <h6 class="text-uppercase fw-bold">Shaheen Super Store</h6>
                     <hr class="mb-4 mt-0 d-inline-block mx-auto"
                         style="width: 60px; background-color: #7c4dff; height: 2px" />
-                    <p>
+                    <p class="px-2 px-md-0">
                         A store where you can buy everything you need. With reasonable prices and swift delivery, we
                         ensure that you get the treatment you deserve .
                     </p>
