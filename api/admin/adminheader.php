@@ -103,10 +103,15 @@
                     </a>
                 </div>
                 <div class="col-2 col-md-0 d-md-none ms-auto text-end justify-content-center d-flex align-items-center" style=" height: 90%;">
+                    
 
+                   
+
+            
                     <!-- Toggle button -->
-                    <button type="button" id="sidebarCollapse" class="btn btn-info w-20   ">
-                        <i class="fas fa-align-left"></i>
+                    <button type="button"  id="sidebarCollapse" class="btn btn-info w-20" onclick="changeClass()"> 
+                        <i id="navButton" class='fas fa-align-left'></i>
+                        
                     </button>
                 </div>
             </div>
