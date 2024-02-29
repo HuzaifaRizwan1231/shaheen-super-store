@@ -1,7 +1,7 @@
 <section class="h-100 mainSection" style="background-color: #eee;">
     <div class="container h-100 py-5">
         <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-10">
+            <div class="col-12 col-md-10">
 
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h3 class="fw-normal mb-0 text-black"><b>Shopping Cart</b></h3>
@@ -45,18 +45,18 @@
                     }
                     else {
                         echo"
-            <div class='container-fluid text-center '>
-                        <div class='row HeadingBorder mb-4'>
-                            <div class='col-md-6'>
+            <div class='container-fluid text-center'>
+                        <div class='row HeadingBorder mb-4 ProductInCart'>
+                            <div class='col-6 col-md-6'>
                                 PRODUCT
                             </div>
-                            <div class='col-md-3'>
+                            <div class='col-3 col-md-3'>
                                 PRICE
 
                             </div>
 
-                            <div class='col-md-3'>
-                                DELETE
+                            <div class='col-3 col-md-3'>
+                                REMOVE
 
                             </div>
                         </div>
@@ -74,24 +74,22 @@
                                 echo "<script>window.location='index.php?cart_page';</script>";
                             }
                             else{
-                                echo "<div class='card rounded-3 mb-4'>
+                                echo "<div class='card rounded-3 mb-4 cartCard'>
                                 <div class='card-body p-4'>
                                     <div class='row d-flex justify-content-between align-items-center'>
-                                        <div class='col-md-3 col-lg-3 col-xl-3 text-center'>
+                                        <div class='col-3 col-md-3 text-center'>
                                             <img src='./admin/Products_images/".$reader['product_image1']."'
-                                                class='img-fluid rounded-3 w-50' alt='Cotton T-shirt'>
+                                                class='img-fluid rounded-3 ProductImageInCart' alt='Cotton T-shirt'>
                                         </div>
-                                        <div class='col-md-3 col-lg-3 col-xl-3'>
-                                            <p class='lead fw-normal mb-2'><b>".$reader['product_name']."</b></p>
-                                            <p><span class='text-muted'>Size: </span>M <span class='text-muted'>Color: </span>Grey
-                                            </p>
+                                        <div class='col-3 col-md-3 '>
+                                            <p class=' mb-2 ProductInCart'><b>".$reader['product_name']."</b></p>
                                         </div>
                                         
-                                        <div class='col-md-3 col-lg-3 col-xl-3 text-center'>
-                                            <h5 class='mb-0'><b>Rs. ".$reader['product_price']."</b></h5>
+                                        <div class='col-3 col-md-3 text-center '>
+                                            <h5 class='mb-0 ProductInCart'><b>Rs. ".$reader['product_price']."</b></h5>
                                         </div>
-                                        <div class='col-md-3 col-lg-3 col-xl-3 text-center'>
-                                            <a href='index.php?cart_page=".$reader['product_id']."' class='text-danger'><i class='fas fa-trash fa-lg'></i></a>
+                                        <div class='col-3 col-md-3 text-center '>
+                                            <a href='index.php?cart_page=".$reader['product_id']."' class='text-danger ProductInCart'><i class='fas fa-trash fa-lg'></i></a>
                                         </div>
                                     </div>
                                 </div>
