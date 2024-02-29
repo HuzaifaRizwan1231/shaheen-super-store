@@ -74,14 +74,14 @@
                                 echo "<script>window.location='index.php?cart_page';</script>";
                             }
                             else{
-                                echo "<div class='card rounded-3 mb-4 cartCard'>
+                                echo "<div class='card rounded-3 mb-4 '>
                                 <div class='card-body p-4'>
                                     <div class='row d-flex justify-content-between align-items-center'>
                                         <div class='col-3 col-md-3 text-center'>
                                             <img src='./admin/Products_images/".$reader['product_image1']."'
                                                 class='img-fluid rounded-3 ProductImageInCart' alt='Cotton T-shirt'>
                                         </div>
-                                        <div class='col-3 col-md-3 '>
+                                        <div class='col-3 col-md-3 text-center'>
                                             <p class=' mb-2 ProductInCart'><b>".$reader['product_name']."</b></p>
                                         </div>
                                         
