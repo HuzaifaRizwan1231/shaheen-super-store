@@ -99,6 +99,10 @@
 
 .Products{
   padding: 0px 40px;
+  @media (max-width: 540px) {
+    padding: 0px 25px;
+
+  }
 }
 
 .Products h3{
@@ -285,7 +289,9 @@
   background-color: #003d29;
   color: white;  
   text-decoration: none;
- 
+  @media (max-width: 325px) {
+    font-size: 15px  ;
+  }
 }
 
 .ProductButtonCart:hover{
@@ -300,7 +306,9 @@
   background-color: white;
   color: #003d29;  
   text-decoration: none;
-  
+  @media (max-width: 325px) {
+    font-size:15px  ;
+  }
 }
 
 .ProductButtonView:hover{
