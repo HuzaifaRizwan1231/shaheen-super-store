@@ -5,7 +5,7 @@
 
         <ul class="list-unstyled mt-4 mx-2 text-center">
             <li>
-                <a href="#" class="w-100">Dashboard</a>
+                <a href="index.php" class="w-100">Dashboard</a>
             </li>
             <li>
                 <a href="#ProductSubmenu" data-toggle="collapse" aria-expanded="false"
@@ -57,80 +57,66 @@
                 <a href="index.php?list_users">List
                     Users</a>
             </li>
+            <hr class="mx-3">
+            <?php 
+                            if ($_SESSION["is_admin_login"] == true){
+                                echo"<li class='nav-item mx-auto dropdown' >
+                                <a class='nav-link dropdown-toggle AdminName' style='padding-right:35px;' href='#' id='navbarDropdown' role='button'
+                                    data-bs-toggle='dropdown' aria-expanded='false'>
+                                    <i class='fa-sharp fa-solid fa-user me-1'></i>".$_SESSION["admin_Name"]."
+                                </a>
+                                <ul class='dropdown-menu' aria-labelledby='navbarDropdown'>
+                                
+                                <li>
+                                <form action='' method='post'>
+                                <input type='submit' class='dropdown-item' name=logout_admin value='Logout'>
+                                </form>
+                                </li>
+                                    
 
+
+                                </ul>
+                                </li>
+                                
+                                ";
+                            }
+
+                            else {
+                            echo"<li class='nav-item me-3'>
+                                <a class='nav-link' href='#'><i class='fa-sharp fa-solid fa-user me-1'></i>Login</a>
+                            </li>";
+                            }
+                        ?>
 
 
 
         </ul>
-        <hr class="mx-3">
+        
 
     </nav>
 
     <!-- Page Content  -->
     <div id="content">
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary TopBar m-0">
+        <nav class="navbar p-0 container-fluid  navbar-expand-lg bg-body-tertiary TopBar my-auto">
+            <div style="height: 80px; width:100%" class="row m-0 d-flex justify-content-between ">
+                <div class="col-10 col-md-12 text-md-center  me-auto" style=" height: 100%;">
+                    <a class="w-80  px-0 "  href="./index.php">
+                        <img class="object-fit-contain " style=" height: 90%;" src="../image/shaheen-super-store-logo1.png" alt="">
+                    </a>
+                </div>
+                <div class="col-2 col-md-0 d-md-none ms-auto text-end justify-content-center d-flex align-items-center" style=" height: 90%;">
 
-            <!-- Toggle button -->
-            <button type="button" id="sidebarCollapse" class="btn btn-info ">
-                <i class="fas fa-align-left"></i>
-
-            </button>
-            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
-                aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <div class="container-fluid text-center">
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                    <a class="navbar-brand ms-auto" style="padding-left:35px;" href="./index.php"><img class="Logo"
-                            src="../image/shaheen-super-store-logo1.png" alt=""></a>
-                    <ul class="navbar-nav mb-2 ms-auto mb-lg-0">
-                        <?php 
-
-            
-
-            if ($_SESSION["is_admin_login"] == true){
-                echo"<li class='nav-item mx-auto dropdown' >
-                <a class='nav-link dropdown-toggle AdminName' style='padding-right:35px;' href='#' id='navbarDropdown' role='button'
-                    data-bs-toggle='dropdown' aria-expanded='false'>
-                    <i class='fa-sharp fa-solid fa-user me-1'></i>".$_SESSION["admin_Name"]."
-                </a>
-                <ul class='dropdown-menu' aria-labelledby='navbarDropdown'>
-                
-                <li>
-                <form action='' method='post'>
-                <input type='submit' class='dropdown-item' name=logout_admin value='Logout'>
-                </form>
-                </li>
-                    
-
-
-                </ul>
-                </li>
-                
-                ";
-            }
-
-            else {
-            echo"<li class='nav-item me-3'>
-                <a class='nav-link' href='#'><i class='fa-sharp fa-solid fa-user me-1'></i>Login</a>
-            </li>";
-            }
-        ?>
-
-
-                    </ul>
+                    <!-- Toggle button -->
+                    <button type="button" id="sidebarCollapse" class="btn btn-info w-20   ">
+                        <i class="fas fa-align-left"></i>
+                    </button>
                 </div>
             </div>
-        </nav>
+          
+            </nav>
+         
+      
         <!-- content -->
         <main>
             <div class="container-fluid mt-4">
@@ -139,7 +125,6 @@
                     if($_SESSION["is_admin_login"] != true){
                         echo"<script>alert('Please Login to Continue')</script>";
                         include 'adminLogin.php';
-                        
                     }
                     else{
                         if(isset($_GET['insert_product'])){

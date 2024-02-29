@@ -60,7 +60,15 @@ a:focus {
     transition: all 0.3s;
     min-height: 98vh;
     position: relative;
-    
+    left: 0;
+    @media (max-width: 540px) {
+       position: fixed;
+       top: 0;
+       left: -250px ;
+       height: 100vh;
+       z-index: 3;
+       margin: 0 !important;
+    }
 }
 
 #sidebarCollapse{
@@ -71,7 +79,10 @@ a:focus {
 }
 
 #sidebar.active {
-    margin-left: -250px !important;
+    left: -250px;
+    @media (max-width: 540px) {
+        left: -0 ;
+     }
 }
 
 #sidebar .sidebar-header {
@@ -174,13 +185,8 @@ a.article:hover {
     MEDIAQUERIES
 ----------------------------------------------------- */
 
-@media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
-    }
-    #sidebar.active {
-        margin-left: 0;
-    }
+@media (max-width: 540px) {
+   
     #sidebarCollapse span {
         display: none;
     }

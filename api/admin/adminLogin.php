@@ -34,12 +34,12 @@ if (isset($_POST['login_admin'])){
             <form action="" method="post">
 
                 <!-- admin email -->
-                <div class="form-outline mb-4 loginField m-auto">
+                <div class="form-outline mb-4 loginFieldAdmin m-auto">
                     <label for="admin_login_id" class="form-label">Email ID</label>
                     <input type="email" class="form-control" name="admin_login_id" placeholder="" required="required">
                 </div>
                 <!-- admin password -->
-                <div class="form-outline mb-4 loginField m-auto">
+                <div class="form-outline mb-4 loginFieldAdmin m-auto">
                     <label for="admin_password" class="form-label">Password</label>
                     <input type="password" class="form-control" name="admin_password" placeholder=""
                         required="required">
@@ -47,7 +47,7 @@ if (isset($_POST['login_admin'])){
 
 
                 <!-- Login -->
-                <div class="form-outline loginField mb-3 m-auto">
+                <div class="form-outline loginFieldAdmin mb-3 m-auto">
                     <input type="submit" class="loginButton" name=login_admin value="Login">
                 </div>
 

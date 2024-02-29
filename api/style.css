@@ -241,6 +241,13 @@
   }
 }
 
+.loginFieldAdmin{
+  width: 40%;
+  @media (max-width: 540px) {
+    width: 100%;  
+  }
+}
+
 .loginButton{
   width: 40%;
   padding: 5px;
