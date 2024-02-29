@@ -28,7 +28,7 @@ if (isset($_POST['login_user'])){
 
 
 
-<div class="container login  LoginForm">
+<div class="container login ">
     <h3 class="text-center mb-4"><b>Login</b></h3>
 
     <form action="" method="post">

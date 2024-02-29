@@ -232,6 +232,9 @@
 
 .loginField{
   width: 40%;
+  @media (max-width: 540px) {
+    width: 80%;  
+    }
 }
 
 .loginButton{
