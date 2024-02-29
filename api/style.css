@@ -15,15 +15,59 @@
 
 
 /* Navbar */
-/* 
-.show{
-  z-index: 3 !important;
-} */
+
 
 .navbar-brand{
   @media (max-width: 540px) {
     padding: 0px 22px !important;
     width: 75%;
+  }
+}
+
+.navbar-collapse{
+  background-color: white;
+  @media (max-width: 540px) {
+    border: 1px solid #dee2e6;
+    padding: 8px 16px;
+    margin-top: 8px;
+    border-radius: 10px;
+  }
+}
+
+
+.searchBarDesktop{
+  @media (max-width: 540px) {
+    display: none;
+  }
+}
+
+.searchBarMobile{
+  @media (min-width: 540px) {
+    display: none;
+  }
+}
+
+.upperList{
+  @media (max-width: 540px) {
+    margin-bottom: 0 !important;
+  }
+}
+
+.upperList li{
+  @media (max-width: 540px) {
+    border-bottom: 1px solid #dee2e6;
+  }
+}
+
+.lowerList{
+  @media (max-width: 540px) {
+    margin-bottom: 0 !important;
+  }
+}
+
+.lowerList li{
+  @media (max-width: 540px) {
+    border-bottom: 1px solid #dee2e6 ;
   }
 }
 

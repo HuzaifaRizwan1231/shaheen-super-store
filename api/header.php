@@ -7,7 +7,13 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse z-3" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <form class="d-flex searchBarMobile mb-2" method="post">
+                <input class="form-control me-2 searchBarMobile" type="text" name="search_product_field" placeholder="Search"
+                    aria-label="Search">
+                <button class="btn btn-outline-success searchBarMobile" type="submit" name="search_product"><i
+                        class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 upperList">
                 <li class="nav-item me-3 dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -19,13 +25,21 @@
                         
                         $query = "SELECT * FROM categories";
                         $query_result = mysqli_query($con,$query);
-                        
+                        $numOfRows = mysqli_num_rows($query_result);
+                        $i = 0;
                         while ($reader = mysqli_fetch_assoc($query_result)){
+                            $i = $i + 1;
                             $cat_id = $reader['category_id'];
                             $cat_name = $reader['category_name'];
-
-                            echo"
-                            <li><a class='dropdown-item' href='index.php?category=$cat_id'>$cat_name</a></li>";
+                            
+                            if ($i == $numOfRows){
+                                echo"
+                                <li class='border-0'><a class='dropdown-item' href='index.php?category=$cat_id'>$cat_name</a></li>";
+                            }
+                            else{
+                                echo"
+                                <li><a class='dropdown-item' href='index.php?category=$cat_id'>$cat_name</a></li>";
+                            }
                         }                        
                         ?>
 
@@ -44,13 +58,22 @@
                         
                         $query = "SELECT * FROM brands";
                         $query_result = mysqli_query($con,$query);
-                        
+                        $numOfRows = mysqli_num_rows($query_result);
+                        $i = 0;
+
                         while ($reader = mysqli_fetch_assoc($query_result)){
+                            $i = $i + 1;
                             $brand_id = $reader['brand_id'];
                             $brand_name = $reader['brand_name'];
 
-                            echo"
-                            <li><a class='dropdown-item' href='index.php?brand=$brand_id'>$brand_name</a></li>";
+                            if ($i == $numOfRows){                            
+                                echo"
+                                <li class='border-0'><a class='dropdown-item' href='index.php?brand=$brand_id'>$brand_name</a></li>";
+                            }
+                            else{
+                                echo"
+                                <li><a class='dropdown-item' href='index.php?brand=$brand_id'>$brand_name</a></li>";
+                            }
                         }                        
                         ?>
 
@@ -67,13 +90,13 @@
 
 
             </ul>
-            <form class="d-flex me-3" method="post">
-                <input class="form-control me-2" type="text" name="search_product_field" placeholder="Search"
+            <form class="d-flex me-3 searchBarDesktop" method="post">
+                <input class="form-control me-2 searchBarDesktop" type="text" name="search_product_field" placeholder="Search"
                     aria-label="Search">
-                <button class="btn btn-outline-success" type="submit" name="search_product"><i
+                <button class="btn btn-outline-success searchBarDesktop" type="submit" name="search_product"><i
                         class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
             </form>
-            <ul class="navbar-nav mb-2 mb-lg-0">
+            <ul class="navbar-nav mb-2 mb-lg-0 lowerList">
                 <?php 
 
                     if (isset($_POST['logout_user'])){
@@ -95,10 +118,10 @@
                         <ul class='dropdown-menu' aria-labelledby='navbarDropdown'>
                         
                         <li><a class='dropdown-item' href='index.php?order_history'>Your Order History</a></li>
-                        <li>
-                        <form action='' method='post'>
-                        <input type='submit' class='dropdown-item' name=logout_user value='Logout'>
-                        </form>
+                        <li class='border-0'>
+                            <form action='' method='post'>
+                            <input type='submit' class='dropdown-item' name=logout_user value='Logout'>
+                            </form>
                         </li>
                             
 
@@ -114,7 +137,7 @@
                     }
                 ?>
 
-                <li class="nav-item me-3">
+                <li class="nav-item me-3 border-0">
                     <a class="nav-link" href="index.php?cart_page"><i
                             class="fa-sharp fa-solid fa-cart-shopping me-1"></i>Cart</a>
                 </li>
