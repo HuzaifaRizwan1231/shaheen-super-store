@@ -33,26 +33,26 @@
             <div class="row gx-5">
                 <aside class="col-lg-6">
                     <div class="border rounded-4 mb-3 d-flex justify-content-center">
-                        <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image" href="#">
-                            <img id="main-image" style="max-width: 100%; height: 350px; margin: auto;"
-                                class="rounded-4 fit" src="./admin/Products_images/<?php echo $product_image1?>" />
+                        <a data-fslightbox="mygalley" class="rounded-4" data-type="image" href="#">
+                            <img id="main-image"
+                                class="rounded-4 fit productImage" src="./admin/Products_images/<?php echo $product_image1?>" />
                         </a>
                     </div>
                     <div class="d-flex justify-content-center mb-3">
-                        <button data-fslightbox="mygalley" onclick="image1_click()" class=" p-0 mx-1 rounded-2 p-images"
+                        <button data-fslightbox="mygalley" onclick="image1_click()" class="bg-white  p-0 mx-1 rounded-2 p-images"
                             target="_blank" data-type="image" href="#">
-                            <img id="image-1" width="60" height="60" class="rounded-2"
+                            <img id="image-1" width="60" height="60" class="rounded-2 object-fit-contain "
                                 src="./admin/Products_images/<?php echo $product_image1?>" />
                         </button>
-                        <button data-fslightbox="mygalley" onclick="image2_click()" class=" p-0 mx-1 rounded-2 p-images"
+                        <button data-fslightbox="mygalley" onclick="image2_click()" class="bg-white p-0 mx-1 rounded-2 p-images"
                             target="_blank" data-type="image" href="#" class="item-thumb">
-                            <img id="image-2" width="60" height="60" class="rounded-2"
+                            <img id="image-2" width="60" height="60" class="rounded-2 object-fit-contain"
                                 src="./admin/Products_images/<?php echo $product_image2?>" />
                         </button>
                         <button data-fslightbox="mygalley" onclick="image3_click()"
-                            class="  p-0 mx-1 rounded-2 p-images" target="_blank" data-type="image" href="#"
+                            class="bg-white  p-0 mx-1 rounded-2 p-images" target="_blank" data-type="image" href="#"
                             class="item-thumb">
-                            <img id="image-3" width="60" height="60" class="rounded-2"
+                            <img id="image-3" width="60" height="60" class="rounded-2 object-fit-contain"
                                 src="./admin/Products_images/<?php echo $product_image3?>" />
                         </button>
 
