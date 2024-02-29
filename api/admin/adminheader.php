@@ -120,7 +120,7 @@
         <!-- content -->
         <main>
             <div class="container-fluid mt-4">
-                <div class="container">
+                <div class="container px-0 px-md-2">
                     <?php 
                     if($_SESSION["is_admin_login"] != true){
                         echo"<script>alert('Please Login to Continue')</script>";

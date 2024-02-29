@@ -1,7 +1,7 @@
 <section class="h-100 mainSection" style="background-color: #eee;">
     <div class="container h-100 py-5">
         <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-10">
+            <div class="col-12 col-md-10">
 
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h3 class="fw-normal mb-0 text-black"><b>Users</b></h3>
@@ -20,7 +20,7 @@
         else{
             echo"
             <div class='container-fluid text-center '>
-                        <div class='row HeadingBorder mb-4'>
+                        <div class='row HeadingBorder d-md-flex d-none mb-4'>
                             <div class='col-md-2'>
                                 ID
                             </div>
@@ -63,27 +63,27 @@
                     <div class='card rounded-3 mb-4'>
                     <div class='card-body p-4'>
                         <div class='row d-flex align-items-center'>
-                            <div class='col-md-2 col-lg-2 col-xl-2 text-center'>
-                                <h5 class='mb-0'><b>$user_id</b></h5>
+                            <div class='col-md-2 col-12 text-center'>
+                                <h5 class='mb-0 ProductInViewProduct'><b><span class='d-inline d-md-none'>ID:</span> $user_id</b></h5>
                             </div>
-                            <div class='col-md-4 col-lg-4 col-xl-4 text-center m-0'>
-                            <h5 class='mb-0'><b>$user_Email
+                            <div class='col-md-4 col-12 text-center m-0'>
+                            <h5 class='mb-0 ProductInViewProduct'><b><span class='d-inline d-md-none'>EMAIL:</span> $user_Email
                             </b></h5>
                             
                                 
                             </div>
                             
                                 
-                                <div class='col-md-2 col-lg-2 col-xl-2 text-center'>
-                                    <h5 class='mb-0'><b>$user_FullName
+                                <div class='col-md-2 col-12 text-center'>
+                                    <h5 class='mb-0 ProductInViewProduct'><b><span class='d-inline d-md-none'>USER:</span> $user_FullName
                                     </b></h5>
                                 </div>
-                                <div class='col-md-2 col-lg-2 col-xl-2 text-center'>
-                                <h5 class='mb-0'><b>$user_Password
+                                <div class='col-md-2 col-12 text-center'>
+                                <h5 class='mb-0 ProductInViewProduct'><b><span class='d-inline d-md-none'>PASSWORD:</span> $user_Password
                                 </b></h5>
                                 </div>
-                                <div class='col-md-2 col-lg-2 col-xl-2 text-center'>
-                                <a href='index.php?delete_user=$user_id' class='text-danger'><i class='fas fa-trash fa-lg'></i></a>
+                                <div class='col-md-2 col-12 p-2 p-md-0 text-center'>
+                                <a href='index.php?delete_user=$user_id' class='text-danger ProductInViewProduct MobileViewButton'><i class='fas fa-trash fa-lg '></i><span class='mx-2 d-inline d-md-none'>Delete</span></a>
                                 </div>
                         </div>
                     </div>

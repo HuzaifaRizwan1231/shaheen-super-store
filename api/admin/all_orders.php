@@ -1,7 +1,7 @@
 <section class="h-100 mainSection" style="background-color: #eee;">
     <div class="container h-100 py-5">
         <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-10">
+            <div class="col-12 col-md-10">
 
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h3 class="fw-normal mb-0 text-black"><b>Orders</b></h3>
@@ -20,7 +20,7 @@
         else{
             echo"
             <div class='container-fluid text-center '>
-                        <div class='row HeadingBorder mb-4'>
+                        <div class='row HeadingBorder d-md-flex d-none mb-4'>
                             <div class='col-md-1'>
                                 ID
                             </div>
@@ -75,29 +75,29 @@
                     <div class='card rounded-3 mb-4'>
                     <div class='card-body p-4'>
                         <div class='row d-flex align-items-center'>
-                            <div class='col-md-1 col-lg-1 col-xl-1 text-center'>
-                                <h5 class='mb-0'><b>$order_id</b></h5>
+                            <div class='col-md-1 col-12 text-center'>
+                                <h5 class='mb-0 ProductInViewProduct'><b><span class='d-inline d-md-none'>ID:</span> $order_id</b></h5>
                             </div>
-                            <div class='col-md-3 col-lg-3 col-xl-3 '>
-                            <h5 class='mb-0'><b>$product_name</b></h5>
+                            <div class='col-md-3 col-12 '>
+                            <h5 class='mb-0 ProductInViewProduct'><b><span class='d-inline d-md-none'>NAME:</span> $product_name</b></h5>
                                 
                                 
                             </div>
-                            <div class='col-md-1 col-lg-1 col-xl-1'>
+                            <div class='col-md-1 col-12 text-center text-md-left'>
                                                     <img src='./Products_images/$product_image'
-                                                        class='img-fluid rounded-3' alt='Cotton T-shirt'>
+                                                        class='img-fluid rounded-3 ImageInViewProduct' alt='Cotton T-shirt'>
                                                 </div>
                                 
-                                <div class='col-md-2 col-lg-2 col-xl-2 text-center'>
-                                    <h5 class='mb-0'><b>Rs. $product_price
+                                <div class='col-md-2 col-12 text-center'>
+                                    <h5 class='mb-0 ProductInViewProduct'><b><span class='d-inline d-md-none'>PRICE:</span> Rs. $product_price
                                     </b></h5>
                                 </div>
-                                <div class='col-md-3 col-lg-3 col-xl-3 text-center'>
-                                <h5 class='mb-0'><b>$user_name
+                                <div class='col-md-3 col-12 text-center'>
+                                <h5 class='mb-0 ProductInViewProduct'><b><span class='d-inline d-md-none'>USER:</span> $user_name
                                     </b></h5>
                                 </div>
-                                <div class='col-md-2 col-lg-2 col-xl-2 text-center'>
-                                <h5 class='mb-0'><b>$order_status
+                                <div class='col-md-2 col-12 text-center'>
+                                <h5 class='mb-0 ProductInViewProduct'><b><span class='d-inline d-md-none'>STATUS:</span> $order_status
                                 </b></h5>
                                 </div>
                         </div>
