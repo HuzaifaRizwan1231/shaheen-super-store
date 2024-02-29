@@ -1,11 +1,3 @@
-<?php 
-    include './includes/connect.php';
-?>
-
-
-
-
-
 
 <section class="h-100 mainSection" style="background-color: #eee;">
     <div class="container h-100 py-5">

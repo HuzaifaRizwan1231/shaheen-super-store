@@ -1,5 +1,4 @@
 <?php 
-    include '../includes/connect.php';
     if(isset($_POST['insert_brand'])){
         $brand_name = $_POST['brand_title'];
 

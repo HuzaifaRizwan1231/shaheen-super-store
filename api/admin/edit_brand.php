@@ -1,5 +1,4 @@
 <?php 
-    include '../includes/connect.php';
     if(isset($_POST['edit_brand'])){
         $brand_name = $_POST['edit_brand_title'];
         $brand_id = $_GET['edit_brand'];

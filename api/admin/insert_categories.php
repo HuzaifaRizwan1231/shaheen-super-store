@@ -1,5 +1,4 @@
 <?php 
-    include '../includes/connect.php';
     if(isset($_POST['insert_cat'])){
         $cat_name = $_POST['category_title'];
 

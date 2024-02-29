@@ -1,6 +1,4 @@
 <?php 
-include '../includes/connect.php';
-
 if (isset($_POST['insert_product'])){
     $product_name = $_POST['product_name'];
     $product_desc = $_POST['product_description'];

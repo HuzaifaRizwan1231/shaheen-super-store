@@ -1,6 +1,4 @@
 <?php 
-include './includes/connect.php';
-// session_start();
 
 if (isset($_POST['register_user'])){
     $user_fullName = $_POST['user_fullName'];

@@ -1,5 +1,4 @@
 <?php 
-include '../includes/connect.php';
 
 if (isset($_POST['edit_product'])){
     $product_id = $_GET['edit_product'];

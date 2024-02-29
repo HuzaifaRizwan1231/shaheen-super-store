@@ -1,5 +1,4 @@
 <?php 
-    include '../includes/connect.php';
     if(isset($_POST['edit_cat'])){
         $cat_name = $_POST['edit_category_title'];
         $cat_id = $_GET['edit_category'];
