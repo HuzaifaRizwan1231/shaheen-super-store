@@ -6,7 +6,7 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse z-3" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item me-3 dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -125,7 +125,7 @@
 </nav>
 <div class="container-fluid">
     <div class="row AdminBar text-center mb-2">
-        <p class="my-auto">Are you an Admin? Go to the <a href="./admin/index.php" target="_blank"><i>Admin
+        <p class="my-auto"><span class="adminBarSpan">Are you an Admin?</span> Go to the <a href="./admin/index.php" target="_blank"><i>Admin
                     DashBoard</i></a></p>
     </div>
 </div>

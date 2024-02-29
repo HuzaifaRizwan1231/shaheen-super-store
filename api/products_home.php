@@ -22,11 +22,11 @@
 
 ?>
 <div class="mainSection">
-    <div class="container-fluid mb-5">
+    <div class="container-fluid carousel-container mb-5">
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./image/71Ie3JXGfVL._SX3000_.jpg" class="d-block w-100" alt="...">
+                    <img src="./image/71Ie3JXGfVL._SX3000_.jpg" class="d-block w-100 object-fit-fill" alt="...">
                 </div>
                 <div class="carousel-item">
                     <img src="./image/71QRxZvKnGL._SX3000_.jpg" class="d-block w-100" alt="...">

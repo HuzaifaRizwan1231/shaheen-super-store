@@ -51,6 +51,7 @@ include './includes/connect.php';
             else if (isset($_GET['cart_page'])){
                 if (!isset($_SESSION['user_id'])){
                     echo"<script>alert('Please Log in first to access cart')</script>";
+                    echo "<script>window.location='index.php';</script>";
                     
                 }
                 else{
