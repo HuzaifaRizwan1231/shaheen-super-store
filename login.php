@@ -1,25 +1,23 @@
-<?php 
+<?php
 
-if (isset($_POST['login_user'])){
-    
+if (isset($_POST['login_user'])) {
+
     $username = $_POST['user_login_id'];
     $password = $_POST['user_password'];
 
     $query = "SELECT * FROM users WHERE user_login_id = '$username' AND user_password = '$password'";
-    $result = mysqli_query($con,$query);
+    $result = mysqli_query($con, $query);
     $rows = mysqli_num_rows($result);
-    
-    if ($rows == 1){
+
+    if ($rows == 1) {
         $reader = mysqli_fetch_assoc($result);
         $_SESSION["user_id"] = $reader['user_id'];
         $_SESSION["user_Name"] = $reader['user_fullName'];
         $_SESSION["user_Password"]  = $reader['user_password'];
         $_SESSION["is_login"] = true;
-        echo"<script>alert('logged in successfully')</script>";
-        echo "<script>window.location='index.php';</script>";
-    }
-    else{
-        echo"<script>alert('Incorrect username or password')</script>";
+        echo "<script>triggerToast( 'Logged In Successfully', 'success','index.php')</script>";
+    } else {
+        echo "<script>triggerToast( 'Incorrect username or password', 'danger')</script>";
     }
 }
 

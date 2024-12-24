@@ -1,16 +1,15 @@
-<?php 
+<?php
 
-if (isset($_POST['shift_brand'])){
+if (isset($_POST['shift_brand'])) {
     $from_brand = $_POST['from_brand'];
     $to_brand = $_POST['to_brand'];
 
     $query = "UPDATE products SET product_brand_id = $to_brand WHERE product_brand_id = $from_brand";
-    $result = mysqli_query($con,$query);
+    $result = mysqli_query($con, $query);
 
-    if ($result){
-        echo"<script>alert('Brand of products changed successfully')</script>";
+    if ($result) {
+        echo "<script>triggerToast( 'Brand of products changed successfully', 'success')</script>";
     }
-
 }
 
 ?>
@@ -26,16 +25,16 @@ if (isset($_POST['shift_brand'])){
         <label for="from_brand" class="form-label">Shift From:</label>
         <select name="from_brand" class="form-select" id="" required="required">
             <option value="">Select a brand</option>
-            <?php 
+            <?php
 
             $query = "SELECT * FROM brands";
-            $result = mysqli_query($con,$query);
-            
-            while ($reader = mysqli_fetch_assoc($result)){
+            $result = mysqli_query($con, $query);
+
+            while ($reader = mysqli_fetch_assoc($result)) {
                 $brand_id = $reader['brand_id'];
                 $brand_name = $reader['brand_name'];
-              
-                echo"<option value='$brand_id'>$brand_name</option>";
+
+                echo "<option value='$brand_id'>$brand_name</option>";
             }
 
             ?>
@@ -48,16 +47,16 @@ if (isset($_POST['shift_brand'])){
         <label for="to_brand" class="form-label">Shift To:</label>
         <select name="to_brand" class="form-select" id="" required="required">
             <option value="">Select a brand</option>
-            <?php 
+            <?php
 
             $query = "SELECT * FROM brands";
-            $result = mysqli_query($con,$query);
-            
-            while ($reader = mysqli_fetch_assoc($result)){
+            $result = mysqli_query($con, $query);
+
+            while ($reader = mysqli_fetch_assoc($result)) {
                 $brand_id = $reader['brand_id'];
                 $brand_name = $reader['brand_name'];
-              
-                echo"<option value='$brand_id'>$brand_name</option>";
+
+                echo "<option value='$brand_id'>$brand_name</option>";
             }
 
             ?>

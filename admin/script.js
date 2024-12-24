@@ -1,18 +1,3 @@
-function image1_click() {
-  document.getElementById("main-image").src =
-    document.getElementById("image-1").src;
-}
-
-function image2_click() {
-  document.getElementById("main-image").src =
-    document.getElementById("image-2").src;
-}
-
-function image3_click() {
-  document.getElementById("main-image").src =
-    document.getElementById("image-3").src;
-}
-
 function showToast(message, type = "primary") {
   // Set the toast message
   const toastBody = document.getElementById("toast-body");
@@ -23,7 +8,10 @@ function showToast(message, type = "primary") {
   toastElement.className = `toast align-items-center text-bg-${type} border-0`;
 
   // Initialize and show the toast
-  const toast = new bootstrap.Toast(toastElement);
+  const toast = new bootstrap.Toast(toastElement, {
+    autohide: true,
+    delay: 5000, // Set the delay dynamically
+  });
   toast.show();
 }
 

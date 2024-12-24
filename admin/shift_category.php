@@ -1,16 +1,15 @@
-<?php 
+<?php
 
-if (isset($_POST['shift_category'])){
+if (isset($_POST['shift_category'])) {
     $from_cat = $_POST['from_category'];
     $to_cat = $_POST['to_category'];
 
     $query = "UPDATE products SET product_category_id = $to_cat WHERE product_category_id = $from_cat";
-    $result = mysqli_query($con,$query);
+    $result = mysqli_query($con, $query);
 
-    if ($result){
-        echo"<script>alert('Category of products changed successfully')</script>";
+    if ($result) {
+        echo "<script>triggerToast( 'Category of products changed successfully', 'success')</script>";
     }
-
 }
 
 ?>
@@ -26,16 +25,16 @@ if (isset($_POST['shift_category'])){
         <label for="from_category" class="form-label">Shift From:</label>
         <select name="from_category" class="form-select" id="" required="required">
             <option value="">Select a category</option>
-            <?php 
+            <?php
 
             $query = "SELECT * FROM categories";
-            $result = mysqli_query($con,$query);
-            
-            while ($reader = mysqli_fetch_assoc($result)){
+            $result = mysqli_query($con, $query);
+
+            while ($reader = mysqli_fetch_assoc($result)) {
                 $category_id = $reader['category_id'];
                 $category_name = $reader['category_name'];
-              
-                echo"<option value='$category_id'>$category_name</option>";
+
+                echo "<option value='$category_id'>$category_name</option>";
             }
 
             ?>
@@ -48,16 +47,16 @@ if (isset($_POST['shift_category'])){
         <label for="to_category" class="form-label">Shift To:</label>
         <select name="to_category" class="form-select" id="" required="required">
             <option value="">Select a category</option>
-            <?php 
+            <?php
 
             $query = "SELECT * FROM categories";
-            $result = mysqli_query($con,$query);
-            
-            while ($reader = mysqli_fetch_assoc($result)){
+            $result = mysqli_query($con, $query);
+
+            while ($reader = mysqli_fetch_assoc($result)) {
                 $category_id = $reader['category_id'];
                 $category_name = $reader['category_name'];
-              
-                echo"<option value='$category_id'>$category_name</option>";
+
+                echo "<option value='$category_id'>$category_name</option>";
             }
 
             ?>

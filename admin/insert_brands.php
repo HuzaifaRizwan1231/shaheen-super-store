@@ -1,25 +1,23 @@
-<?php 
-    if(isset($_POST['insert_brand'])){
-        $brand_name = $_POST['brand_title'];
+<?php
+if (isset($_POST['insert_brand'])) {
+    $brand_name = $_POST['brand_title'];
 
-        $query= "SELECT * FROM brands WHERE brand_name = '$brand_name'";
-        $result = mysqli_query($con,$query);
-        $total_rows = mysqli_num_rows($result);
+    $query = "SELECT * FROM brands WHERE brand_name = '$brand_name'";
+    $result = mysqli_query($con, $query);
+    $total_rows = mysqli_num_rows($result);
 
-        if ($total_rows == 1){
-            echo"<script>alert('Brand is already added')</script>";
-        }
+    if ($total_rows == 1) {
+        echo "<script>triggerToast( 'Brand is already added', 'warning')</script>";
+    } else {
 
-        else{
+        $query = "INSERT INTO brands (brand_name) VALUES ('$brand_name')";
+        $result = mysqli_query($con, $query);
 
-        $query= "INSERT INTO brands (brand_name) VALUES ('$brand_name')";
-        $result = mysqli_query($con,$query);
-
-        if ($result){
-            echo"<script>alert('Brand Added Successfully')</script>";
+        if ($result) {
+            echo "<script>triggerToast( 'Category added successfully', 'success')</script>";
         }
     }
-    }
+}
 ?>
 <form action="" method="post">
     <h3 class="text-center mb-3">Insert Brands</h3>

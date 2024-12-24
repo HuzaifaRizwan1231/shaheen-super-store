@@ -1,25 +1,23 @@
-<?php 
-    if(isset($_POST['insert_cat'])){
-        $cat_name = $_POST['category_title'];
+<?php
+if (isset($_POST['insert_cat'])) {
+    $cat_name = $_POST['category_title'];
 
-        $query= "SELECT * FROM categories WHERE category_name = '$cat_name'";
-        $result = mysqli_query($con,$query);
-        $total_rows = mysqli_num_rows($result);
+    $query = "SELECT * FROM categories WHERE category_name = '$cat_name'";
+    $result = mysqli_query($con, $query);
+    $total_rows = mysqli_num_rows($result);
 
-        if ($total_rows == 1){
-            echo"<script>alert('Category is already added')</script>";
-        }
+    if ($total_rows == 1) {
+        echo "<script>triggerToast( 'Category is already added', 'warning')</script>";
+    } else {
 
-        else{
+        $query = "INSERT INTO categories (category_name) VALUES ('$cat_name')";
+        $result = mysqli_query($con, $query);
 
-        $query= "INSERT INTO categories (category_name) VALUES ('$cat_name')";
-        $result = mysqli_query($con,$query);
-
-        if ($result){
-            echo"<script>alert('Category Added Successfully')</script>";
+        if ($result) {
+            echo "<script>triggerToast( 'Category added successfully', 'success')</script>";
         }
     }
-    }
+}
 ?>
 <form action="" method="post">
     <h3 class="text-center mb-4 ">Insert Categories</h3>

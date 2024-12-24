@@ -1,12 +1,12 @@
 <!-- connection file -->
-<?php 
+<?php
 session_start();
 
-if (!isset($_SESSION["is_login"])){
+if (!isset($_SESSION["is_login"])) {
     $_SESSION["is_login"] = false;
 }
 
-if (isset($_POST['logout_user'])){
+if (isset($_POST['logout_user'])) {
     session_unset();
     session_destroy();
 
@@ -18,6 +18,8 @@ if (isset($_POST['logout_user'])){
 
 include './includes/connect.php';
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,72 +36,70 @@ include './includes/connect.php';
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap" rel="stylesheet">
     <script>
         function changeClass() {
-        var element = document.getElementById('navButton');
-        if (element.classList.contains('fas')) {
-            element.classList.remove('fas');
-            element.classList.remove('fa-align-left');
-            element.classList.add('fa-solid');
-            element.classList.add('fa-xmark');
-        } else {
-            element.classList.remove('fa-solid');
-            element.classList.remove('fa-xmark');
-            element.classList.add('fas');
-            element.classList.add('fa-align-left');
+            var element = document.getElementById('navButton');
+            if (element.classList.contains('fas')) {
+                element.classList.remove('fas');
+                element.classList.remove('fa-align-left');
+                element.classList.add('fa-solid');
+                element.classList.add('fa-xmark');
+            } else {
+                element.classList.remove('fa-solid');
+                element.classList.remove('fa-xmark');
+                element.classList.add('fas');
+                element.classList.add('fa-align-left');
+            }
         }
-    }
     </script>
+    <script src="script.js"></script>
+
 </head>
 
 <body>
+
     <!-- including header -->
     <header>
-        <?php include 'header.php'?>
+        <?php include 'header.php' ?>
     </header>
 
 
     <main>
 
-        <?php 
-            if(isset($_GET['view_details'])){
-                include 'view_details.php';
-            }
-            else if (isset($_GET['cart_page'])){
-                if (!isset($_SESSION['user_id'])){
-                    echo"<script>alert('Please Log in first to access cart')</script>";
-                    echo "<script>window.location='index.php';</script>";
-                    
-                }
-                else{
+        <?php include 'toast.php' ?>
 
-                    include 'cart_page.php';
-                }
+        <?php
+        if (isset($_GET['view_details'])) {
+            include 'view_details.php';
+        } else if (isset($_GET['cart_page'])) {
+            if (!isset($_SESSION['user_id'])) {
+
+                echo "<script>triggerToast( 'Please Login First to Access this page', 'danger','index.php')</script>";
+            } else {
+
+                include 'cart_page.php';
             }
-            else if(isset($_GET['order_history'])){
-                include 'order_history.php';
-            }
-            else if(isset($_GET['login_page'])){
-                include 'login.php';
-            }
-            else if(isset($_GET['register_page'])){
-                include 'register.php';
-            }
-            else{
-                include 'products_home.php';
-            }
+        } else if (isset($_GET['order_history'])) {
+            include 'order_history.php';
+        } else if (isset($_GET['login_page'])) {
+            include 'login.php';
+        } else if (isset($_GET['register_page'])) {
+            include 'register.php';
+        } else {
+            include 'products_home.php';
+        }
         ?>
     </main>
 
     <footer>
-        <?php 
-                include 'footer.php';
-            ?>
+        <?php
+        include 'footer.php';
+        ?>
     </footer>
     <!-- Bootstrap javascript link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
     </script>
-    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/8242ed1443.js" crossorigin="anonymous"></script>
+
 
 </body>
 

@@ -1,5 +1,5 @@
-<?php 
-if (isset($_POST['insert_product'])){
+<?php
+if (isset($_POST['insert_product'])) {
     $product_name = $_POST['product_name'];
     $product_desc = $_POST['product_description'];
     $product_keywords = $_POST['product_keywords'];
@@ -7,31 +7,29 @@ if (isset($_POST['insert_product'])){
     $product_category = $_POST['product_category'];
     $product_price = $_POST['product_price'];
 
-    
-    $product_name_image1 =$_FILES['product_image1']['name'] ;
-    $product_name_image2 =$_FILES['product_image2']['name'];
+
+    $product_name_image1 = $_FILES['product_image1']['name'];
+    $product_name_image2 = $_FILES['product_image2']['name'];
     $product_name_image3 = $_FILES['product_image3']['name'];
 
 
-    $product_tempname_image1 =$_FILES['product_image1']['tmp_name'] ;
-    $product_tempname_image2 =$_FILES['product_image2']['tmp_name'] ;
+    $product_tempname_image1 = $_FILES['product_image1']['tmp_name'];
+    $product_tempname_image2 = $_FILES['product_image2']['tmp_name'];
     $product_tempname_image3 = $_FILES['product_image3']['tmp_name'];
 
 
-    move_uploaded_file($product_tempname_image1,"./Products_images/$product_name_image1");
-    move_uploaded_file($product_tempname_image2,"./Products_images/$product_name_image2");
-    move_uploaded_file($product_tempname_image3,"./Products_images/$product_name_image3");
+    move_uploaded_file($product_tempname_image1, "./Products_images/$product_name_image1");
+    move_uploaded_file($product_tempname_image2, "./Products_images/$product_name_image2");
+    move_uploaded_file($product_tempname_image3, "./Products_images/$product_name_image3");
 
 
     $query = "INSERT INTO products (product_name,product_description,product_keywords,product_price,product_image1,product_image2,product_image3,product_brand_id,product_category_id,product_reg_date) VALUES ('$product_name','$product_desc','$product_keywords','$product_price','$product_name_image1','$product_name_image2','$product_name_image3','$product_brand','$product_category',NOW())";
 
-    $result = mysqli_query($con,$query);
+    $result = mysqli_query($con, $query);
 
-    if ($result){
-        echo"<script>alert('Product has been added successfully')</script>";
+    if ($result) {
+        echo "<script>triggerToast( 'Product added successfully', 'success')</script>";
     }
-
-
 }
 
 
@@ -67,15 +65,15 @@ if (isset($_POST['insert_product'])){
         <select name="product_brand" class="form-select" id="" required="required">
             <option value="">Select a brand</option>
             <?php
-            
+
             $query = "SELECT * FROM brands";
-            $result = mysqli_query($con,$query);
-            
-            while ($reader = mysqli_fetch_assoc($result)){
+            $result = mysqli_query($con, $query);
+
+            while ($reader = mysqli_fetch_assoc($result)) {
                 $brand_id = $reader['brand_id'];
                 $brand_name = $reader['brand_name'];
-              
-                echo"<option value='$brand_id'>$brand_name</option>";
+
+                echo "<option value='$brand_id'>$brand_name</option>";
             }
 
             ?>
@@ -88,16 +86,16 @@ if (isset($_POST['insert_product'])){
 
         <select name="product_category" class="form-select" id="" required="required">
             <option value="">Select a category</option>
-            <?php 
+            <?php
 
             $query = "SELECT * FROM categories";
-            $result = mysqli_query($con,$query);
-            
-            while ($reader = mysqli_fetch_assoc($result)){
+            $result = mysqli_query($con, $query);
+
+            while ($reader = mysqli_fetch_assoc($result)) {
                 $category_id = $reader['category_id'];
                 $category_name = $reader['category_name'];
-              
-                echo"<option value='$category_id'>$category_name</option>";
+
+                echo "<option value='$category_id'>$category_name</option>";
             }
 
             ?>
