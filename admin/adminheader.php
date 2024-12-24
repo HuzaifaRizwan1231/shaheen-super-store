@@ -8,7 +8,7 @@
                 <a href="index.php" class="w-100">Dashboard</a>
             </li>
             <li>
-                <a href="#ProductSubmenu" data-toggle="collapse" aria-expanded="false"
+                <a href="#ProductSubmenu"  data-toggle="collapse" role="button" aria-expanded="false" aria-controls="ProductSubmenu"
                     class="dropdown-toggle">Products</a>
                 <ul class="collapse list-unstyled" id="ProductSubmenu">
                     <li>
@@ -80,7 +80,7 @@
 
                             else {
                             echo"<li class='nav-item me-3'>
-                                <a class='nav-link' href='#'><i class='fa-sharp fa-solid fa-user me-1'></i>Login</a>
+                                <a class='nav-link' href='index.php'><i class='fa-sharp fa-solid fa-user me-1'></i>Login</a>
                             </li>";
                             }
                         ?>
@@ -124,8 +124,11 @@
             <div class="container-fluid mt-4">
                 <div class="container px-0 px-md-2">
                     <?php 
-                    if($_SESSION["is_admin_login"] != true){
+                    if((isset($_GET['insert_product']) || isset($_GET['insert_category']) || isset($_GET['view_product']) || isset($_GET['view_category']) || isset($_GET['insert_brand']) || isset($_GET['view_brand']) || isset($_GET['all_orders']) || isset($_GET['list_users']) || isset($_GET['edit_category']) || isset($_GET['edit_product']) || isset($_GET['delete_product']) || isset($_GET['delete_category']) || isset($_GET['edit_brand']) || isset($_GET['delete_brand']) || isset($_GET['shift_brand_of_products']) || isset($_GET['shift_category_of_products']) || isset($_GET['delete_user'])) && $_SESSION["is_admin_login"] != true){
                         echo"<script>alert('Please Login to Continue')</script>";
+                        echo"<script>window.location='index.php';</script>";
+                    }
+                    else if ($_SESSION["is_admin_login"] != true){
                         include 'adminLogin.php';
                     }
                     else{

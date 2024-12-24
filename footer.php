@@ -2,7 +2,7 @@
 <div class="container-fluid p-0 ">
 
     <!-- Footer -->
-    <footer class="text-center text-lg-start text-white mt-5" style=" background-color: #002715">
+    <footer class="text-center text-lg-start text-white" style=" background-color: #002715">
 
         <!-- Section: Social media -->
 
@@ -17,7 +17,7 @@
                     <h6 class="text-uppercase fw-bold">Shaheen Super Store</h6>
                     <hr class="mb-4 mt-0 d-inline-block mx-auto"
                         style="width: 60px; background-color: #7c4dff; height: 2px" />
-                    <p>
+                    <p class="px-2 px-md-0">
                         A store where you can buy everything you need. With reasonable prices and swift delivery, we
                         ensure that you get the treatment you deserve .
                     </p>
@@ -33,7 +33,7 @@
 
 
                     <?php 
-                            $query = "SELECT * FROM Categories LIMIT 4";
+                            $query = "SELECT * FROM categories LIMIT 4";
                             $result = mysqli_query($con,$query);
                             
                             while($reader = mysqli_fetch_assoc($result)){
@@ -41,7 +41,7 @@
                                 $cat_id = $reader['category_id'];
                                 echo"
                                 <p>
-                                <a href='index.php?category=$cat_id' class='text-white'>$cat_name</a>
+                                <a href='http://shaheen-super-store.infinityfreeapp.com/index.php?category=$cat_id' class='text-white'>$cat_name</a>
                                 </p>";
                             }
                         ?>
@@ -58,7 +58,7 @@
 
 
                     <?php 
-                            $query = "SELECT * FROM Brands LIMIT 4";
+                            $query = "SELECT * FROM brands LIMIT 4";
                             $result = mysqli_query($con,$query);
                             
                             while($reader = mysqli_fetch_assoc($result)){
@@ -66,7 +66,7 @@
                                 $brand_id = $reader['brand_id'];
                                 echo"
                                 <p>
-                                <a href='index.php?brand=$brand_id' class='text-white'>$brand_name</a>
+                                <a href='http://shaheen-super-store.infinityfreeapp.com/index.php?brand=$brand_id' class='text-white'>$brand_name</a>
                                 </p>";
                             }
                         ?>
@@ -95,7 +95,7 @@
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
             © 2023 Copyright:
-            <a class="text-white" href="index.php">shaheensuperstore.com</a>
+            <a class="text-white" href="http://shaheen-super-store.infinityfreeapp.com/index.php">shaheensuperstore.com</a>
         </div>
         <!-- Copyright -->
     </footer>

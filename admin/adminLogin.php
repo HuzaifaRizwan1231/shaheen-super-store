@@ -10,11 +10,11 @@ if (isset($_POST['login_admin'])){
     $rows = mysqli_num_rows($result);
     
     if ($rows == 1){
+        $_SESSION["is_admin_login"] = true;
         $reader = mysqli_fetch_assoc($result);
         $_SESSION["admin_id"] = $reader['admin_id'];
         $_SESSION["admin_Name"] = $reader['admin_fullName'];
         $_SESSION["admin_Password"]  = $reader['admin_password'];
-        $_SESSION["is_admin_login"] = true;
         echo"<script>alert('logged in successfully')</script>";
         echo "<script>window.location='index.php';</script>";
     }

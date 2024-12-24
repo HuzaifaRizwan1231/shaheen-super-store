@@ -126,7 +126,7 @@ if (isset($_POST['insert_product'])){
         <input type="text" class="form-control" placeholder="Product Price" name="product_price" required="required">
     </div>
 
-    <div class="form-outline text-center">
+    <div class="form-outline text-center mb-4">
         <input type="submit" class="SubmitButton" name=insert_product value="Insert Product">
     </div>
 
